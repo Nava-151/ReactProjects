@@ -25,7 +25,6 @@ const style = {
 };
 
 const Logged = ({userId}:{userId:number}) => {
-    debugger
     const [user, userDispatch] = useContext(UserContext)
     const [isUpdate, SetIsUpdate] = useState(false)
     let url = 'http://localhost:3000/api/user'
@@ -112,12 +111,12 @@ const Logged = ({userId}:{userId:number}) => {
                 <Box sx={style}>
                     <form onSubmit={handleSubmit}>
                         
-                        <TextField label='userName' inputRef={nameRef} />
-                        <TextField label='userEmail' inputRef={emailRef} />
+                        <TextField label='userName' inputRef={nameRef} value={user.firstName}  />
+                        <TextField label='userEmail' inputRef={emailRef}  type='email' value={user.email}/>
                         <TextField label='userAddress' inputRef={addressRef} />
                         <TextField label='userPhoneNumber' inputRef={phoneNumberRef} />
                         <TextField label='userLastName' inputRef={lastNameRef} />
-                        <TextField label='userPassword' inputRef={passwordRef} type='password'/>
+                        <TextField label='userPassword' inputRef={passwordRef} type='password' value={user.password}/>
 
                         <Button type="submit">update details</Button>
 

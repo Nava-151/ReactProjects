@@ -61,7 +61,6 @@ const HomePage = () => {
 
             setOpen(false);
             setIsLoginOrReg(true);
-            debugger
             setUserID(res.data.userId)
             console.log("user succeeded update "+res.data);
             
@@ -121,8 +120,8 @@ const HomePage = () => {
                     <form onSubmit={handleSubmit}>
 
                         <TextField label='userName' inputRef={nameRef} />
-                        <TextField label='userPassword' inputRef={passwordRef} />
-                        <TextField label='userEmail' inputRef={emailRef} />
+                        <TextField label='userPassword' inputRef={passwordRef} type='password' />
+                        <TextField label='userEmail' inputRef={emailRef} type='email'/>
                         <Button type="submit">Login</Button>
                     </form>
                 </Box>

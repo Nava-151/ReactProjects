@@ -27,7 +27,7 @@ export default ()=>{
     
             <Link to="/home">   Home   </Link>
             <Link to="/about">   About   </Link>
-            <Link to={`/about/${user.firstName}`}>   User </Link>
+            <Link to={`/user/${user.firstName}`}>   User </Link>
             <NavLink to='/rer'/>
 
         </nav>
